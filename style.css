@@ -15,9 +15,23 @@ body {
   line-height: 1.6;
 }
 
-<div class="logo">
-  <img src="images/logo.png" alt="Clinic Logo">
-</div>
+/* Target the logo container */
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+/* Target the actual image inside the logo div */
+.logo img {
+  height: 60px; /* Adjust this value to make it larger or smaller */
+  width: auto;   /* Keeps the aspect ratio perfect */
+  display: block;
+}
+
+/* Optional: Add a little padding to the navbar so the bigger logo doesn't touch the edges */
+.navbar {
+  padding: 0.5rem 1rem; 
+}
 
 
 /* ================= HEADER / NAVBAR ================= */
@@ -269,6 +283,7 @@ textarea {
     font-size: 2.4rem;
   }
 }
+
 
 
 
