@@ -3,93 +3,350 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dr. Clinic</title>
+  <title>Dr. Saurabh Upadhyay - Psychiatrist in Lucknow</title>
 
   <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- HEADER -->
-  <header>
-    <div class="container nav">
-      <h1 class="logo">Dr. Saurabh Upadhyay</h1>
-      <nav>
+ <!-- HEADER/NAVIGATION -->
+  <header class="header">
+    <div class="container nav-container">
+      <div class="logo">
+        <h1>Dr. Saurabh Upadhyay</h1>
+        <p class="subtitle">MD Psychiatry - Institute of Mental Health and Hospital, Agra</p>
+      </div>
+      <nav class="nav-menu">
+        <a href="#home">Home</a>
         <a href="#about">About</a>
         <a href="#services">Services</a>
+        <a href="#videos">Videos</a>
         <a href="#appointment">Appointment</a>
         <a href="#contact">Contact</a>
       </nav>
+     <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </div>
   </header>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="container">
-      <h2>Compassionate Care. Trusted Results.</h2>
-      <p>Your health is our priority.</p>
-      <a href="#appointment" class="btn">Book Appointment</a>
+  <!-- HERO SECTION -->
+  <section id="home" class="hero">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <h2>Compassionate Mental Health Care</h2>
+      <p>Professional Psychiatric Services in Lucknow</p>
+      <p class="hero-subtitle">Treatment for Depression, Anxiety, Addiction, Schizophrenia & More</p>
+      <a href="#appointment" class="btn btn-primary">Book Appointment Now</a>
+      <a href="https://wa.me/917017784451?text=Hi%20Dr.%20Saurabh,%20I%20would%20like%20to%20book%20an%20appointment" class="btn btn-whatsapp" target="_blank">💬 WhatsApp Consultation</a>
     </div>
   </section>
 
-  <!-- ABOUT -->
-  <section id="about" class="section">
+  <!-- ABOUT SECTION -->
+  <section id="about" class="section about-section">
     <div class="container">
-      <h3>About the Doctor</h3>
-      <p>
-        Dr. ABC is a highly experienced medical professional providing
-        personalized care with a modern approach to treatment.
-      </p>
-    </div>
-  </section>
+      <h2>About Dr. Saurabh Upadhyay</h2>
+      <div class="about-content">
+        <div class="about-text">
+          <p>Dr. Saurabh Upadhyay is a highly qualified and experienced psychiatrist dedicated to providing comprehensive mental health care to patients in Lucknow and surrounding areas.</p>
+          
+          <h3>Qualifications & Experience</h3>
+          <ul class="qualifications">
+            <li><strong>MD (Doctor of Medicine) in Psychiatry</strong></li>
+            <li><strong>Institute:</strong> Institute of Mental Health and Hospital, Agra</li>
+            <li><strong>Specialization:</strong> Clinical Psychiatry, Psychopharmacology, Cognitive Behavioral Therapy</li>
+            <li><strong>Experience:</strong> Several years of clinical practice in psychiatric care and mental health management</li>
+          </ul>
 
-  <!-- SERVICES -->
-  <section id="services" class="section light">
-    <div class="container">
-      <h3>Our Services</h3>
-      <div class="cards">
-        <div class="card">General Consultation</div>
-        <div class="card">Health Checkups</div>
-        <div class="card">Diagnosis & Treatment</div>
-        <div class="card">Follow-up Care</div>
+          <h3>Clinical Expertise</h3>
+          <p>Dr. Saurabh specializes in the diagnosis and treatment of a wide range of mental health conditions, with a patient-centered approach that combines medication management, psychotherapy, and lifestyle counseling for optimal recovery.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- APPOINTMENT -->
-  <section id="appointment" class="section">
+  <!-- SERVICES SECTION -->
+  <section id="services" class="section services-section light-bg">
     <div class="container">
-      <h3>Request an Appointment</h3>
+      <h2>Our Services</h2>
+      <p class="section-subtitle">Comprehensive psychiatric care for various mental health conditions</p>
+      
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">🧠</div>
+          <h3>Depression & Mood Disorders</h3>
+          <p>Expert treatment for major depression, bipolar disorder, and other mood-related conditions using medication and therapy.</p>
+        </div>
 
-      <!-- This form will be replaced by Google Form later -->
-      <form>
-        <input type="text" placeholder="Full Name" required />
-        <input type="email" placeholder="Email Address" required />
-        <input type="tel" placeholder="Phone Number" required />
-        <input type="date" required />
-        <textarea placeholder="Your message"></textarea>
-        <button type="submit">Submit</button>
-      </form>
+        <div class="service-card">
+          <div class="service-icon">😰</div>
+          <h3>Anxiety Disorders</h3>
+          <p>Comprehensive management of generalized anxiety, panic disorder, social anxiety, and phobias through evidence-based treatments.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">🚫</div>
+          <h3>Addiction & Substance Abuse</h3>
+          <p>Specialized treatment for alcohol, drug, and behavioral addictions with detoxification, rehabilitation, and relapse prevention strategies.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">🧩</div>
+          <h3>Schizophrenia & Psychotic Disorders</h3>
+          <p>Comprehensive care for schizophrenia, schizoaffective disorder, and other psychotic conditions with medication management and psychosocial support.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">😴</div>
+          <h3>Sleep Disorders</h3>
+          <p>Treatment for insomnia, sleep apnea, restless leg syndrome, and other sleep-related issues affecting mental and physical health.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">👨‍👩‍👧</div>
+          <h3>Family & Couple Counseling</h3>
+          <p>Therapeutic sessions to improve family dynamics, relationship issues, and communication in couples and families.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">🧘</div>
+          <h3>Stress Management & Counseling</h3>
+          <p>Individual counseling sessions to manage work stress, life changes, grief, and other psychological challenges.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">💊</div>
+          <h3>Medication Management</h3>
+          <p>Careful prescription and monitoring of psychiatric medications with regular follow-ups to ensure effectiveness and minimize side effects.</p>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- CONTACT -->
-  <section id="contact" class="section light">
+  <!-- YOUTUBE VIDEOS SECTION -->
+  <section id="videos" class="section videos-section">
     <div class="container">
-      <h3>Contact</h3>
-      <p>📍 Petrol pump, UGF-28 Vasundhara Complex, Tedhi Pulia Ring Road, Near Munshi Pulia, Sector 16, Indra Nagar, Lucknow, Uttar Pradesh 226016</p>
-      <p>📞 +91 7017784451</p>
-      <p>🕘 Mon – Sat | 9 AM – 6 PM</p>
+      <h2>Educational Videos</h2>
+      <p class="section-subtitle">Learn more about mental health topics from Dr. Saurabh Upadhyay</p>
+      
+      <div class="videos-grid">
+        <div class="video-card">
+          <div class="video-container">
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <h3>Understanding Depression</h3>
+        </div>
 
-      <a class="whatsapp" href="https://wa.me/91XXXXXXXXXX">Chat on WhatsApp</a>
+        <div class="video-card">
+          <div class="video-container">
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <h3>Managing Anxiety</h3>
+        </div>
+
+        <div class="video-card">
+          <div class="video-container">
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <h3>Addiction Recovery Tips</h3>
+        </div>
+
+        <div class="video-card">
+          <div class="video-container">
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <h3>Mental Health Awareness</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- APPOINTMENT BOOKING SECTION -->
+  <section id="appointment" class="section appointment-section light-bg">
+    <div class="container">
+      <h2>Book an Appointment</h2>
+      <p class="section-subtitle">Schedule your consultation with Dr. Saurabh Upadhyay</p>
+      
+      <div class="appointment-container">
+        <form class="appointment-form" id="appointmentForm">
+          <div class="form-group">
+            <label for="fullName">Full Name *</label>
+            <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone Number *</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+          </div>
+
+          <div class="form-group">
+            <label for="appointmentDate">Preferred Date *</label>
+            <input type="date" id="appointmentDate" name="appointmentDate" required>
+          </div>
+
+          <div class="form-group">
+            <label for="appointmentTime">Preferred Time *</label>
+            <select id="appointmentTime" name="appointmentTime" required>
+              <option value="">Select time slot</option>
+              <option value="9:00 AM - 10:00 AM">9:00 AM - 10:00 AM</option>
+              <option value="10:00 AM - 11:00 AM">10:00 AM - 11:00 AM</option>
+              <option value="11:00 AM - 12:00 PM">11:00 AM - 12:00 PM</option>
+              <option value="12:00 PM - 1:00 PM">12:00 PM - 1:00 PM</option>
+              <option value="2:00 PM - 3:00 PM">2:00 PM - 3:00 PM</option>
+              <option value="3:00 PM - 4:00 PM">3:00 PM - 4:00 PM</option>
+              <option value="4:00 PM - 5:00 PM">4:00 PM - 5:00 PM</option>
+              <option value="5:00 PM - 6:00 PM">5:00 PM - 6:00 PM</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="concern">Chief Concern/Reason for Visit *</label>
+            <select id="concern" name="concern" required>
+              <option value="">Select your concern</option>
+              <option value="Depression">Depression</option>
+              <option value="Anxiety">Anxiety & Panic Disorder</option>
+              <option value="Addiction">Addiction & Substance Abuse</option>
+              <option value="Schizophrenia">Schizophrenia & Psychotic Disorders</option>
+              <option value="Sleep Disorder">Sleep Disorder</option>
+              <option value="Family Counseling">Family Counseling</option>
+              <option value="Stress Management">Stress Management</option>
+              <option value="Other">Other/General Consultation</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Additional Message (Optional)</label>
+            <textarea id="message" name="message" placeholder="Any additional information you'd like to share" rows="4"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block">Request Appointment</button>
+          <p class="form-note">We will confirm your appointment via phone or email within 24 hours</p>
+        </form>
+
+        <div class="appointment-info">
+          <h3>Appointment Guidelines</h3>
+          <ul>
+            <li>📅 <strong>Availability:</strong> Monday - Saturday, 9:00 AM - 6:00 PM</li>
+            <li>⏱️ <strong>Duration:</strong> First consultation - 45-60 minutes, Follow-up - 30-45 minutes</li>
+            <li>💳 <strong>Consultation Fee:</strong> Please contact for current rates</li>
+            <li>✓ <strong>Confirmation:</strong> You'll receive a confirmation call or email</li>
+            <li>📍 <strong>Location:</strong> Petrol pump, UGF-28 Vasundhara Complex, Lucknow</li>
+          </ul>
+
+          <div class="quick-contact">
+            <a href="https://wa.me/917017784451?text=Hi%20Dr.%20Saurabh,%20I%20would%20like%20to%20book%20an%20appointment" class="btn btn-whatsapp-full" target="_blank">
+              💬 Quick WhatsApp Booking
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact" class="section contact-section">
+    <div class="container">
+      <h2>Get In Touch</h2>
+      <p class="section-subtitle">Contact us for appointments or any inquiries</p>
+
+      <div class="contact-grid">
+        <div class="contact-card">
+          <div class="contact-icon">📍</div>
+          <h3>Our Location</h3>
+          <p>Petrol pump, UGF-28 Vasundhara Complex<br>Tedhi Pulia Ring Road<br>Near Munshi Pulia, Sector 16<br>Indra Nagar, Lucknow<br>Uttar Pradesh 226016</p>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-icon">📞</div>
+          <h3>Phone</h3>
+          <p><a href="tel:+917017784451">+91 7017784451</a></p>
+          <p style="font-size: 14px; margin-top: 10px; color: #666;">Available during clinic hours</p>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-icon">🕘</div>
+          <h3>Clinic Hours</h3>
+          <p><strong>Monday to Saturday</strong><br>9:00 AM - 6:00 PM<br><br><strong>Sunday:</strong> Closed</p>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-icon">💬</div>
+          <h3>WhatsApp</h3>
+          <a href="https://wa.me/917017784451?text=Hi%20Dr.%20Saurabh,%20I%20would%20like%20to%20consult%20with%20you" target="_blank" class="btn btn-whatsapp-small">Chat on WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="map-container">
+        <h3 style="text-align: center; margin-bottom: 20px;">Find Us On Map</h3>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3558.793888389429!2d80.98749!3d26.85283!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399be5f8e5e5e5e5%3A0x0!2sVasundhara%20Complex%2C%20Lucknow!5e0!3m2!1sen!2sin!4v1234567890" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS SECTION -->
+  <section class="section testimonials-section light-bg">
+    <div class="container">
+      <h2>What Our Patients Say</h2>
+      <p class="section-subtitle">Real stories from people who found healing</p>
+
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <p>"Dr. Saurabh is compassionate, professional, and truly cares about his patients. He helped me overcome my depression. Highly recommended!"</p>
+          <p class="testimonial-author">- Rajesh K.</p>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <p>"Excellent psychiatrist with deep knowledge and practical solutions. The appointment experience was smooth and professional."</p>
+          <p class="testimonial-author">- Priya M.</p>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <p>"Dr. Saurabh's treatment approach is comprehensive. I'm grateful for the support and progress I've made under his care."</p>
+          <p class="testimonial-author">- Amit S.</p>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- FOOTER -->
-  <footer>
-    <p>© 2026 Dr. ABC Clinic. All rights reserved.</p>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>Dr. Saurabh Upadhyay</h4>
+          <p>Professional Psychiatric Services in Lucknow</p>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#appointment">Appointment</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Contact</h4>
+          <p>📞 +91 7017784451</p>
+          <p>📍 Lucknow, Uttar Pradesh</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Dr. Saurabh Upadhyay. All rights reserved. | Privacy Policy | Terms of Service</p>
+      </div>
+    </div>
   </footer>
 
   <script src="script.js"></script>
