@@ -15,6 +15,8 @@ body {
   line-height: 1.6;
 }
 
+/* ================= HEADER / NAVBAR ================= */
+
 .header {
   position: sticky;
   top: 0;
@@ -23,44 +25,64 @@ body {
   z-index: 1000;
 }
 
+/* Navbar height increased */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 14px 20px; /* 🔥 INCREASED HEIGHT */
 }
 
-/* Logo */
+/* Logo (image or text both supported) */
 .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   font-weight: bold;
   color: #2c7be5;
+  font-size: 1.1rem;
+}
+
+.logo img {
+  height: 42px; /* 🔥 Proper logo size */
+  width: auto;
 }
 
 /* Desktop navigation */
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem; /* 🔥 More spacing */
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1rem; /* 🔥 Bigger text */
 }
 
 /* Hamburger button */
 .menu-toggle {
   display: none;
-  font-size: 1.8rem;
+  font-size: 2rem; /* 🔥 Bigger hamburger */
   background: none;
   border: none;
   cursor: pointer;
   color: #2c7be5;
 }
 
-/* Mobile navigation */
+/* ================= MOBILE NAV ================= */
+
 @media (max-width: 768px) {
+
   .menu-toggle {
     display: block;
   }
 
+  /* CLOSED BY DEFAULT */
   .nav-links {
     position: absolute;
-    top: 64px;
+    top: 72px; /* 🔥 Below navbar */
     left: 0;
     width: 100%;
     background: #ffffff;
@@ -68,7 +90,7 @@ body {
     align-items: center;
     gap: 1rem;
     padding: 1rem 0;
-    display: none; /* CLOSED BY DEFAULT */
+    display: none; /* ✅ IMPORTANT */
     box-shadow: 0 6px 12px rgba(0,0,0,0.08);
   }
 
@@ -76,21 +98,25 @@ body {
     display: flex;
   }
 
+  .nav-links a {
+    font-size: 1.1rem;
+    padding: 8px 0;
+  }
+
   .logo {
-    max-width: 75%;
     font-size: 1rem;
   }
+
+  .logo img {
+    height: 36px;
+  }
 }
+
+/* ================= REST OF SITE (UNCHANGED) ================= */
 
 .whatsapp .btn {
   margin-top: 1.5rem;
   display: inline-block;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: #333;
-  font-size: 0.9rem;
 }
 
 .hero {
