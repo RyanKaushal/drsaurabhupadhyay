@@ -44,9 +44,12 @@ body {
 }
 
 .logo img {
-  height: 70px; /* Large, clear logo */
+  height: 100px; /* Increased from 70px for better visibility on desktop */
   width: auto;
   display: block;
+  /* Optional: Add a subtle border for extra emphasis */
+  border: 2px solid #2c7be5; /* Matches your theme color */
+  border-radius: 8px; /* Softens the edges */
 }
 
 .logo-text {
@@ -287,7 +290,15 @@ textarea {
   .hero h1 {
     font-size: 2.4rem;
   }
+  /* Mobile-specific override */
+@media (max-width: 768px) {
+  .logo img {
+    height: 60px; /* Increased from 36px for better mobile visibility */
+    /* Keep the border if desired, or remove for a cleaner mobile look */
+  }
 }
+}
+
 
 
 
