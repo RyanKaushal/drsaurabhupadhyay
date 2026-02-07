@@ -42,7 +42,7 @@ body {
 }
 
 .logo img {
-  height: 120px;               /* 🔥 FIX: Proper visible size */
+  height: 200px;               /* 🔥 FIX: Proper visible size */
   width: auto;
   display: block;
   border-radius: 0px;
@@ -69,7 +69,7 @@ body {
 .nav-links {
   display: flex;
   list-style: none;
-  gap: 5rem;
+  gap: 2rem;
   align-items: center;
   margin-left: auto;          /* 🔥 FIX: forces right alignment */
 }
@@ -294,5 +294,6 @@ textarea {
     font-size: 2.4rem;
   }
 }
+
 
 
