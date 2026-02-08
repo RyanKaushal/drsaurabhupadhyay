@@ -56,64 +56,90 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   /* ===============================
-   Services → Open Article in Modal Iframe
-   =============================== */
-  document.querySelectorAll(".service-item").forEach(item => {
-    item.addEventListener("click", (e) => {
-      e.preventDefault();
+ Services → Open Article in Modal Iframe
+============================== */
+document.querySelectorAll(".service-item").forEach(item => {
+  item.addEventListener("click", (e) => {
+    e.preventDefault();
 
-      // Get the article content from the hidden div
-      const articleDiv = item.querySelector(".service-article");
-      if (!articleDiv) return; // No article, skip
+    // Get the article content from the hidden div
+    const articleDiv = item.querySelector(".service-article");
+    if (!articleDiv) return; // No article, skip
 
-      const articleHTML = articleDiv.innerHTML; // Get the article's HTML
+    let articleHTML = articleDiv.innerHTML; // Get the article's HTML
 
-      // Create modal elements
-      const modal = document.createElement("div");
-      modal.className = "modal active";
+    // Remove the last <p> (WhatsApp link) from the article
+    const tempDiv = document.createElement("div");
+    tempDiv.innerHTML = articleHTML;
+    const paragraphs = tempDiv.querySelectorAll("p");
+    if (paragraphs.length > 0) {
+      paragraphs[paragraphs.length - 1].remove(); // Remove the last paragraph (WhatsApp link)
+    }
+    articleHTML = tempDiv.innerHTML; // Updated HTML without the link
 
-      const modalContent = document.createElement("div");
-      modalContent.className = "modal-content";
+    // Create modal elements
+    const modal = document.createElement("div");
+    modal.className = "modal active";
 
-      const closeBtn = document.createElement("button");
-      closeBtn.className = "close-btn";
-      closeBtn.innerHTML = "&times;"; // X symbol
-      closeBtn.addEventListener("click", () => {
-        modal.remove(); // Close modal
-      });
+    const modalContent = document.createElement("div");
+    modalContent.className = "modal-content";
 
-      const iframe = document.createElement("iframe");
-      iframe.className = "modal-iframe";
-      iframe.srcdoc = `<html><head><style>body { font-family: Arial, sans-serif; padding: 1rem; line-height: 1.5; color: #333; } a { color: #2c7be5; }</style></head><body>${articleHTML}</body></html>`; // Load article into iframe
-      const whatsappDiv = document.createElement("div");
-    whatsappDiv.className = "modal-whatsapp";
-
-    const whatsappBtn = document.createElement("button");
-    whatsappBtn.className = "btn secondary";
-    whatsappBtn.textContent = "Contact on WhatsApp";
-    whatsappBtn.addEventListener("click", () => {
-      window.open(`https://wa.me/917017784451?text=Hello%20Doctor%2C%20I%20would%20like%20to%20consult%20regarding%20${item.getAttribute('data-issue')}.%20Please%20let%20me%20know%20the%20available%20appointment%20timings.`, "_blank");
-      setTimeout(() => modal.remove(), 500); // Delay to allow link to open, then close
+    const closeBtn = document.createElement("button");
+    closeBtn.className = "close-btn";
+    closeBtn.innerHTML = "&times;"; // X symbol
+    closeBtn.addEventListener("click", () => {
+      modal.remove(); // Close modal
     });
 
-    whatsappDiv.appendChild(whatsappBtn);
+    const iframe = document.createElement("iframe");
+    iframe.className = "modal-iframe";
+    // Load article into iframe with a button at the bottom
+    iframe.srcdoc = `
+      <html>
+        <head>
+          <style>
+            body { font-family: Arial, sans-serif; padding: 1rem; line-height: 1.5; color: #333; }
+            a { color: #2c7be5; }
+            .btn { padding: 0.7rem 1.4rem; border-radius: 30px; text-decoration: none; font-size: 0.9rem; cursor: pointer; border: none; display: inline-block; }
+            .secondary { background: #2dbf6c; color: #fff; }
+            .modal-whatsapp-btn { margin-top: 1rem; display: block; width: 100%; text-align: center; }
+          </style>
+        </head>
+        <body>
+          ${articleHTML}
+          <div class="modal-whatsapp-btn">
+            <button class="btn secondary" onclick="window.open('https://wa.me/917017784451?text=Hello%20Doctor%2C%20I%20would%20like%20to%20consult%20regarding%20${item.getAttribute('data-issue')}.%20Please%20let%20me%20know%20the%20available%20appointment%20timings.', '_blank'); window.parent.postMessage('closeModal', '*');">Contact on WhatsApp</button>
+          </div>
+        </body>
+      </html>
+    `;
 
     // Assemble modal
     modalContent.appendChild(closeBtn);
     modalContent.appendChild(iframe);
-    modalContent.appendChild(whatsappDiv);
     modal.appendChild(modalContent);
     document.body.appendChild(modal);
+
+    // Listen for message to close modal
+    const messageHandler = (event) => {
+      if (event.data === 'closeModal') {
+        modal.remove();
+        window.removeEventListener('message', messageHandler);
+      }
+    };
+    window.addEventListener('message', messageHandler);
 
     // Close modal on background click
     modal.addEventListener("click", (event) => {
       if (event.target === modal) {
         modal.remove();
+        window.removeEventListener('message', messageHandler);
       }
     });
   });
 });
 });
+
 
 
 
