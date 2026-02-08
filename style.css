@@ -16,7 +16,7 @@ html {
 
   scroll-behavior: smooth;
 
-  scroll-padding-top: 120px;  /* 🔥 NEW: Adds 120px padding to prevent header overlap on anchor scrolls */
+  scroll-padding-top: 150px;  /* 🔥 NEW: Adds 120px padding to prevent header overlap on anchor scrolls */
 
 }
 
@@ -937,6 +937,7 @@ textarea {
     max-width: 90%;
   }
 }
+
 
 
 
