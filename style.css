@@ -218,6 +218,42 @@ h2 {
   gap: 1rem;
 }
 
+/* testing */
+.service-item {
+  cursor: pointer;
+  transition: all 0.3s ease; /* Smooth expansion */
+}
+
+.service-item.expanded {
+  /* Optional: Change background or add shadow when expanded */
+  background: #f0f8ff; /* Light blue tint for emphasis */
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1); /* Deeper shadow */
+}
+
+.service-article {
+  display: none; /* Hidden by default */
+  margin-top: 1rem;
+  padding: 1rem;
+  background: #ffffff;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #333;
+}
+
+.service-item.expanded .service-article {
+  display: block; /* Show when expanded */
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .service-article {
+    font-size: 0.85rem;
+    padding: 0.8rem;
+  }
+}
+/* testing */
 .card {
   background: #ffffff;
   padding: 1.5rem;
@@ -295,6 +331,7 @@ textarea {
     font-size: 2.4rem;
   }
 }
+
 
 
 
