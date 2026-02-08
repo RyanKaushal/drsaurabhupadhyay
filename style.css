@@ -7,6 +7,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 120px;  /* 🔥 NEW: Adds 120px padding to prevent header overlap on anchor scrolls */
 }
 
 body {
@@ -294,6 +295,7 @@ textarea {
     font-size: 2.4rem;
   }
 }
+
 
 
 
