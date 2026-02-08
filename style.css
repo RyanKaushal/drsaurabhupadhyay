@@ -844,4 +844,29 @@ textarea {
 
   }
 
+  .clinic-images {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin: 20px 0;
 }
+
+.clinic-images img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+  .clinic-images {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
+}
+
