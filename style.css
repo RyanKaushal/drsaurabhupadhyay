@@ -858,8 +858,8 @@ textarea {
 }
 
 .clinic-images img {
-  width: 220px;
-  height: 150px;
+  width: 270px;
+  height: 200px;
   object-fit: cover;
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.15);
@@ -881,6 +881,7 @@ textarea {
     height: 220px;
   }
 }
+
 
 
 
